@@ -1,3 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CareBooking</string>
+    <string name="login_subtitle">Đặt lịch hẹn khám bệnh dễ dàng</string>
+
+    <!-- Login Screen -->
+    <string name="email">Email</string>
+    <string name="email_hint">Nhập email của bạn</string>
+    <string name="password">Mật khẩu</string>
+    <string name="password_hint">Nhập mật khẩu</string>
+    <string name="remember_me">Ghi nhớ tài khoản</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="login">Đăng nhập</string>
+    <string name="or">hoặc</string>
+    <string name="no_account">Chưa có tài khoản?</string>
+    <string name="sign_up">Đăng ký ngay</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="signup_subtitle">Tham gia CareBooking để đặt lịch hẹn dễ dàng</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="full_name_hint">Nhập họ và tên đầy đủ</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="phone_hint">Nhập số điện thoại</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="confirm_password_hint">Nhập lại mật khẩu</string>
+    <string name="agree">Tôi đồng ý với</string>
+    <string name="terms_conditions">Điều khoản &amp; Điều kiện</string>
+    <string name="and_text">và</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="already_have_account">Đã có tài khoản?</string>
+    <string name="back">Quay lại</string>
+
+    <!-- Logo -->
+    <string name="app_logo">Logo ứng dụng CareBooking</string>
 </resources>

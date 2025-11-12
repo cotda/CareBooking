@@ -13,3 +13,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# =========================
+# Backend (Node.js)
+# =========================
+/backend/node_modules/
+/backend/dist/
+/backend/build/
+/backend/.env
+/backend/.vscode/
+/backend/logs/
+/backend/dump/
