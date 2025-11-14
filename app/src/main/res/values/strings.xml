@@ -33,4 +33,22 @@
 
     <!-- Logo -->
     <string name="app_logo">Logo ứng dụng CareBooking</string>
+
+    <!-- Forgot Password Form -->
+    <string name="forgot_password_title">Quên mật khẩu?</string>
+    <string name="forgot_password_description">Đừng lo lắng! Nhập email của bạn và chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu.</string>
+    <string name="email_or_phone">Email</string>
+    <string name="enter_email_or_phone">Nhập email</string>
+    <string name="send_instructions">Gửi yêu cầu đặt lại</string>
+    <string name="back_to_login">Quay lại đăng nhập</string>
+
+    <!-- Success State -->
+    <string name="check_your_email">Kiểm tra email của bạn</string>
+    <string name="reset_instructions_sent">Chúng tôi đã gửi hướng dẫn đặt lại mật khẩu đến</string>
+    <string name="resend_email">Gửi lại email</string>
+    <string name="no_email_received">Không nhận được email? <a href="#">Kiểm tra thư mục spam</a></string>
+
+    <!-- Common -->
+    <string name="icon">Icon</string>
+    <string name="success">Thành công</string>
 </resources>
