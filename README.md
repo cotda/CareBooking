@@ -41,4 +41,4 @@ Wireless LAN adapter Wi-Fi:
    Subnet Mask . . . . . . . . . . . : ***
    Default Gateway . . . . . . . . . : ***
 
-### Thêm dòng API_BASE_URL=http://port:3000/api/ vào local.properties
+### Đổi port trong file app\api.properties
