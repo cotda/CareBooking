@@ -41,4 +41,4 @@ Wireless LAN adapter Wi-Fi:
    Subnet Mask . . . . . . . . . . . : ***
    Default Gateway . . . . . . . . . : ***
 
-### Đổi port trong file app\api.properties
+### Đổi port trong file app\api.properties (nếu dùng emulator thì dùng port 10.0.2.2)
