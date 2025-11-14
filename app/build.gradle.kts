@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -8,8 +10,12 @@ android {
     namespace = "com.example.carebooking"
     compileSdk = 36
 
-    val apiBase: String = (project.findProperty("API_BASE_URL") as? String) ?: ""
-    
+    // Load API_BASE_URL từ file api.properties
+    val apiProps = Properties()
+    apiProps.load(project.file("api.properties").inputStream())
+
+    val apiUrl: String = apiProps.getProperty("API_BASE_URL")
+
     buildFeatures {
         buildConfig = true
     }
@@ -21,7 +27,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        buildConfigField("String", "API_BASE_URL", "\"$apiBase\"")
+        // Đưa vào BuildConfig.java
+        buildConfigField("String", "API_BASE_URL", "\"$apiUrl\"")
     }
 
     buildTypes {
