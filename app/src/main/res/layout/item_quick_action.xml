@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_quick_action"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/actionIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_calendar_white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/actionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đặt lịch"
+        android:textSize="12sp"
+        android:textColor="#444444"
+        android:layout_marginTop="6dp" />
+
+</LinearLayout>

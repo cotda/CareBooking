@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/nav_booking"
+        android:title="Đặt lịch"
+        android:icon="@drawable/ic_calendar_white"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:title="Lịch sử"
+        android:icon="@drawable/ic_history"/>
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Thông báo"
+        android:icon="@drawable/ic_bell"/>
+
+    <item
+        android:id="@+id/nav_account"
+        android:title="Tài khoản"
+        android:icon="@drawable/ic_user"/>
+</menu>

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.carebooking.R
 import com.example.carebooking.data.network.ApiService
 import com.example.carebooking.data.network.RetrofitClient
+import com.example.carebooking.ui.home.HomeActivity
 import com.example.carebooking.ui.signup.SignUpActivity
 import com.example.carebooking.utils.ToastUtils
 import okhttp3.ResponseBody
@@ -111,7 +112,11 @@ class LoginActivity : AppCompatActivity() {
                             .edit().clear().apply()
                     }
 
-                } else {
+                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                else {
                     ToastUtils.showError(
                         this@LoginActivity,
                         "Sai email hoặc mật khẩu"
