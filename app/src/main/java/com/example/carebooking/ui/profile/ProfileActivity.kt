@@ -8,10 +8,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.carebooking.BuildConfig
 import com.example.carebooking.R
+import com.example.carebooking.ui.common.setupBottomNavigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 
 class ProfileActivity : AppCompatActivity() {
 
+    private lateinit var bottomNav: BottomNavigationView
     private val menuItems = listOf(
         ProfileMenuItem(R.id.menuPersonalInfo, ProfileMenuAction.PERSONAL_INFO),
         ProfileMenuItem(R.id.menuHealthRecord, ProfileMenuAction.HEALTH_RECORD),
@@ -22,6 +25,9 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        bottomNav = findViewById(R.id.bottomNav)
+        setupBottomNavigation(bottomNav, R.id.nav_account)
 
         val profileInfo = ProfileInfo(
             fullName = intent.getStringExtra(EXTRA_FULL_NAME) ?: DEFAULT_FULL_NAME,
@@ -36,6 +42,11 @@ class ProfileActivity : AppCompatActivity() {
         bindMenuActions()
         bindButtons()
         bindVersionLabel()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        bottomNav.selectedItemId = R.id.nav_account
     }
 
     private fun bindProfile(info: ProfileInfo) {

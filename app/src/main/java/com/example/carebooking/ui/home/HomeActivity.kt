@@ -1,27 +1,26 @@
 package com.example.carebooking.ui.home
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.carebooking.R
 import com.example.carebooking.ui.home.booking.BookingActivity
 import com.example.carebooking.ui.profile.ProfileActivity
+import com.example.carebooking.ui.common.setupBottomNavigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        setupBottomNavigation()
+        bottomNav = findViewById(R.id.bottomNav)
+        setupBottomNavigation(bottomNav, R.id.nav_home)
     }
 
-    private fun setupBottomNavigation() {
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-
-        // Set tab mặc định
+    override fun onResume() {
+        super.onResume()
         bottomNav.selectedItemId = R.id.nav_home
 
         bottomNav.setOnItemSelectedListener { item ->

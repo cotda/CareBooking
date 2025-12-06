@@ -51,6 +51,7 @@
     <!-- Common -->
     <string name="icon">Icon</string>
     <string name="success">Thành công</string>
+    <string name="nav_feature_in_development">Tính năng này đang được phát triển.</string>
 
     <!-- Profile -->
     <string name="profile_title">Tài khoản</string>
@@ -72,4 +73,39 @@
     <string name="profile_contact_email">Email</string>
     <string name="profile_contact_birthday">Ngày sinh</string>
     <string name="profile_contact_address">Địa chỉ</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Thông báo</string>
+    <string name="notifications_mark_read">Đánh dấu đã đọc</string>
+    <string name="notifications_tab_all">Tất cả</string>
+    <string name="notifications_tab_reminders">Nhắc hẹn</string>
+    <string name="notifications_section_upcoming">Lịch hẹn sắp tới</string>
+    <string name="notifications_section_read">Thông báo đã đọc</string>
+    <string name="notifications_see_details">Xem chi tiết</string>
+    <string name="notifications_remind_later">Nhắc tôi sau</string>
+    <string name="notifications_marked_all_read">Đã đánh dấu tất cả thông báo là đã đọc.</string>
+    <string name="notifications_detail_placeholder">Mở chi tiết cho %1$s</string>
+    <string name="notifications_snooze_placeholder">Sẽ nhắc lại sau cho %1$s</string>
+
+    <!-- History -->
+    <string name="history_title">Lịch sử khám bệnh</string>
+    <string name="history_filter">Bộ lọc</string>
+    <string name="history_tab_all">Tất cả</string>
+    <string name="history_tab_upcoming">Sắp tới</string>
+    <string name="history_tab_completed">Đã khám</string>
+    <string name="history_section_upcoming">Lịch hẹn sắp tới</string>
+    <string name="history_section_completed">Đã khám</string>
+    <string name="history_view_details">Xem chi tiết</string>
+    <string name="history_action_prescription">Đơn thuốc</string>
+    <string name="history_action_results">Kết quả</string>
+    <string name="history_action_view">Xem</string>
+    <string name="history_status_confirmed">Đã xác nhận</string>
+    <string name="history_status_pending">Chờ xác nhận</string>
+    <string name="history_prescription_placeholder">Mở đơn thuốc cho %1$s</string>
+    <string name="history_results_placeholder">Xem kết quả xét nghiệm cho %1$s</string>
+    <string name="history_details_placeholder">Xem chi tiết lịch hẹn với %1$s</string>
+    <string name="history_record_placeholder">Xem hồ sơ khám với %1$s</string>
+    <string name="history_date_format">📅 %1$s</string>
+    <string name="history_time_format">🕐 %1$s</string>
+    <string name="history_hospital_format">📍 %1$s</string>
 </resources>
