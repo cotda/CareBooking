@@ -29,6 +29,8 @@
         <activity android:name=".ui.login.ForgotPasswordActivity" />
         <activity android:name=".ui.home.HomeActivity" />
         <activity android:name=".ui.home.booking.BookingActivity" />
+        <activity android:name=".ui.profile.ProfileActivity" />
+
     </application>
 
 </manifest>
