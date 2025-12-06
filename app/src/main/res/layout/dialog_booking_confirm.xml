@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Xác nhận thông tin đặt lịch"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:text="Chuyên khoa:" />
+    <TextView android:id="@+id/tvSpecialty" android:textStyle="bold" />
+
+    <TextView android:text="Triệu chứng:" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvDisease" android:textStyle="bold" />
+
+    <TextView android:text="Ngày khám:" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvDate" android:textStyle="bold" />
+
+    <TextView android:text="Giờ khám:" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvTime" android:textStyle="bold" />
+
+    <TextView android:text="Ghi chú:" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvNotes" android:textStyle="bold" />
+</LinearLayout>

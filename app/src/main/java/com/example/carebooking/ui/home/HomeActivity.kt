@@ -1,9 +1,11 @@
 package com.example.carebooking.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.carebooking.R
+import com.example.carebooking.ui.home.booking.BookingActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -25,12 +27,12 @@ class HomeActivity : AppCompatActivity() {
             when (item.itemId) {
 
                 R.id.nav_home -> {
-                    Toast.makeText(this, "Trang chủ", Toast.LENGTH_SHORT).show()
                     true
                 }
 
                 R.id.nav_booking -> {
-                    Toast.makeText(this, "Đặt lịch (giả lập)", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, BookingActivity::class.java)
+                    startActivity(intent)
                     true
                 }
 
