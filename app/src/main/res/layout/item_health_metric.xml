@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with Icon and Trend -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <!-- Icon -->
+            <FrameLayout
+                android:id="@+id/iconContainer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/ivMetricIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_activity"
+                    app:tint="#EF4444" />
+            </FrameLayout>
+
+            <!-- Trend Icon -->
+            <ImageView
+                android:id="@+id/ivTrendIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_trending_up"
+                app:tint="#F97316"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/tvMetricLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huyết áp"
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Value and Unit -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/tvMetricValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120/80"
+                android:textColor="#111827"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMetricUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mmHg"
+                android:textColor="#6B7280"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp" />
+        </LinearLayout>
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/tvMetricStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bình thường"
+            android:textColor="#047857"
+            android:textSize="11sp"
+            android:background="@drawable/bg_status_normal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F3F4F6"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Timestamp -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_clock"
+                app:tint="#9CA3AF"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/tvMetricDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hôm nay, 08:30"
+                android:textColor="#9CA3AF"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

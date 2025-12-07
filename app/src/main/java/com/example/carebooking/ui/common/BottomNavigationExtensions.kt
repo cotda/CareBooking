@@ -1,11 +1,11 @@
 package com.example.carebooking.ui.common
 
 import android.content.Intent
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.carebooking.R
 import com.example.carebooking.ui.history.HistoryActivity
 import com.example.carebooking.ui.home.HomeActivity
+import com.example.carebooking.ui.home.booking.BookingActivity
 import com.example.carebooking.ui.notifications.NotificationActivity
 import com.example.carebooking.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,6 +26,11 @@ fun AppCompatActivity.setupBottomNavigation(
                     true
                 }
 
+                R.id.nav_booking -> {
+                    navigateTo(BookingActivity::class.java)
+                    true
+                }
+
                 R.id.nav_history -> {
                     navigateTo(HistoryActivity::class.java)
                     true
@@ -39,15 +44,6 @@ fun AppCompatActivity.setupBottomNavigation(
                 R.id.nav_account -> {
                     navigateTo(ProfileActivity::class.java)
                     true
-                }
-
-                R.id.nav_booking -> {
-                    Toast.makeText(
-                        this,
-                        R.string.nav_feature_in_development,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    false
                 }
 
                 else -> false

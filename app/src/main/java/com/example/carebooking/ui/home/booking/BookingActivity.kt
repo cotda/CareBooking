@@ -1,26 +1,21 @@
 package com.example.carebooking.ui.home.booking
 
-import android.app.DatePickerDialog
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.GridLayout
-import android.widget.Toast
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.carebooking.R
+import com.example.carebooking.ui.common.setupBottomNavigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import java.util.*
 
 class BookingActivity : AppCompatActivity() {
 
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
+    private lateinit var btnBack: ImageView
+    private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +23,16 @@ class BookingActivity : AppCompatActivity() {
 
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)
+        btnBack = findViewById(R.id.btnBack)
+        bottomNav = findViewById(R.id.bottomNav)
+
+        // Setup back button
+        btnBack.setOnClickListener {
+            finish()
+        }
+
+        // Setup bottom navigation
+        setupBottomNavigation(bottomNav, R.id.nav_booking)
 
         val adapter = BookingPagerAdapter(this)
         viewPager.adapter = adapter
@@ -38,5 +43,10 @@ class BookingActivity : AppCompatActivity() {
                 1 -> tab.text = "Đặt lịch riêng"
             }
         }.attach()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        bottomNav.selectedItemId = R.id.nav_booking
     }
 }

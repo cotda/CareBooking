@@ -1,78 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F4F7FF"
+    android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
-            android:text="Chuyên khoa *"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Spinner
-            android:id="@+id/spSpecialty"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-
-        <TextView
-            android:text="Triệu chứng/Bệnh lý"
-            android:textSize="14sp"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Spinner
-            android:id="@+id/spDisease"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-
-        <TextView
-            android:text="Chọn ngày khám *"
-            android:textSize="14sp"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btnPickDate"
-            android:text="Chọn ngày"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-
-        <TextView
-            android:id="@+id/tvDate"
-            android:text="Chưa chọn"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="Chọn giờ khám *"
-            android:textSize="14sp"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <GridLayout
-            android:id="@+id/gridTimes"
-            android:columnCount="3"
+        <!-- Popular Badge Header -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-        <Button
-            android:id="@+id/btnSubmitCustom"
-            android:text="Xác nhận đặt lịch"
-            android:layout_marginTop="24dp"
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="🔥"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/bg_orange_light"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gói khám bán chạy"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Packages RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPackages"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

@@ -32,6 +32,9 @@
         <activity android:name=".ui.notifications.NotificationActivity" />
         <activity android:name=".ui.profile.ProfileActivity" />
         <activity android:name=".ui.history.HistoryActivity" />
+        <activity android:name=".ui.history.MedicalDetailActivity" />
+        <activity android:name=".ui.history.TestResultsActivity" />
+        <activity android:name=".ui.history.PrescriptionActivity" />
 
     </application>
 

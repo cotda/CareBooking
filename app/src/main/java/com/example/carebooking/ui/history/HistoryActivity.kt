@@ -208,27 +208,18 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private fun onPrescriptionClick(record: MedicalRecord) {
-        Toast.makeText(
-            this,
-            getString(R.string.history_prescription_placeholder, record.doctor),
-            Toast.LENGTH_SHORT
-        ).show()
+        val intent = android.content.Intent(this, MedicalDetailActivity::class.java)
+        startActivity(intent)
     }
 
     private fun onResultsClick(record: MedicalRecord) {
-        Toast.makeText(
-            this,
-            getString(R.string.history_results_placeholder, record.doctor),
-            Toast.LENGTH_SHORT
-        ).show()
+        val intent = android.content.Intent(this, MedicalDetailActivity::class.java)
+        startActivity(intent)
     }
 
     private fun onRecordViewClick(record: MedicalRecord) {
-        Toast.makeText(
-            this,
-            getString(R.string.history_record_placeholder, record.doctor),
-            Toast.LENGTH_SHORT
-        ).show()
+        val intent = android.content.Intent(this, MedicalDetailActivity::class.java)
+        startActivity(intent)
     }
 }
 

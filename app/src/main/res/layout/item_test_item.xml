@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_test_result_normal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Left: Test Name & Range -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTestItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hồng cầu"
+            android:textSize="14sp"
+            android:textColor="@color/gray_900"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvNormalRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bình thường: 4.0-5.5"
+            android:textSize="11sp"
+            android:textColor="@color/gray_500" />
+    </LinearLayout>
+
+    <!-- Right: Value & Status -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/tvTestValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.8 T/L"
+            android:textSize="14sp"
+            android:textColor="@color/gray_900"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvAbnormalIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑ Cao"
+            android:textSize="11sp"
+            android:textColor="@color/orange_600"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
